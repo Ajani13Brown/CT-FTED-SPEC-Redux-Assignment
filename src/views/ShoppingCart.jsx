@@ -18,7 +18,7 @@ const ShoppingCart = () => {
 
     const handleCheckout = () => {
         dispatch(checkout());
-        sessionStorage.removeItem('cartItems'); // Clear session storage
+        sessionStorage.removeItem('cartItems');
         alert('Checkout successful!');
     };
 

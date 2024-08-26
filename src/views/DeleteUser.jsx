@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Modal } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const DeleteUser = () => {
@@ -24,21 +23,14 @@ const DeleteUser = () => {
   };
 
   return (
-    <Modal.Dialog>
-      <Modal.Header closeButton>
-        <Modal.Title>Delete Account</Modal.Title>
-      </Modal.Header>
-
-      <Modal.Body>
-        <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-      </Modal.Body>
-
-      <Modal.Footer>
-        <Button variant="secondary" onClick={() => navigate('/')}>Cancel</Button>
-        <Button variant="danger" onClick={handleDelete}>Delete</Button>
-      </Modal.Footer>
-    </Modal.Dialog>
+    <div className="delete-user-container">
+      <h1>Delete Account</h1>
+      <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+      <button onClick={() => navigate('/')} style={{ marginRight: '10px' }}>Cancel</button>
+      <button onClick={handleDelete} style={{ backgroundColor: 'red', color: 'white' }}>Delete</button>
+    </div>
   );
 };
 
 export default DeleteUser;
+

@@ -9,7 +9,6 @@ const UpdateUser = () => {
   const token = sessionStorage.getItem('authToken');
 
   useEffect(() => {
-    // Fetch existing user data if necessary
   }, []);
 
   const handleSubmit = async (e) => {

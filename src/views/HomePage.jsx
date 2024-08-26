@@ -9,7 +9,6 @@ const HomePage = () => {
   const cartCount = useSelector((state) => state.cart.totalItems);
 
   useEffect(() => {
-    // Fetch categories from API
     const fetchCategories = async () => {
       try {
         const response = await fetch('https://fakestoreapi.com/products/categories');
